@@ -23,3 +23,4 @@ Aplicación utilizada en la cursada 2020 de Ingenieria de Software. UTN-FRLP
 -**Jonathan Sergio Rodriguez Alvarez**
 -**Enmanuel Humberto Bernal Custodio**
 -**Nicolas Vidal**
+-**Nahuel Jesus Marro**
