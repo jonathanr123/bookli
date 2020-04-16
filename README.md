@@ -1,4 +1,4 @@
-
+	
 <<<<<<< HEAD
 Aplicación utilizada en la cursada 2020 de Ingenieria de Software. UTN-FRLP
 
@@ -19,6 +19,7 @@ Aplicación utilizada en la cursada 2020 de Ingenieria de Software. UTN-FRLP
 
 `npm start`
 
-Grupo Nº3:
-Jonathan Sergio Rodriguez Alvarez
-Enmanuel Humberto Bernal Custodio
+##Grupo Nº3:
+-**Jonathan Sergio Rodriguez Alvarez**
+-**Enmanuel Humberto Bernal Custodio**
+-**Nicolas Vidal**
