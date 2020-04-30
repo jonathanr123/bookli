@@ -49,6 +49,11 @@ const Book = db.define(
         },
         genres: {
             type: Sequelize.JSON,
+            allowNull:false,
+         },
+        genres: {
+            type: Sequelize.JSON,
+            
         },
         authors: {
             type: Sequelize.JSON,
