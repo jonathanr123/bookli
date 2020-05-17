@@ -23,6 +23,18 @@ after(() => {
 });
 
 describe('Home Test', () => {
+
+    //test realizado por jonathan
+    test('Deberia opacarse la card cuando paso el mouse por encima', browser => {
+        browser
+            .url(BASE_URL)
+            .waitForElementVisible('body')
+            .waitForElementVisible('.booklist .book')
+            .moveToElement('body > main > div > div.books-container > div > a:nth-child(n) > div', 10, 10, function(){
+                browser.assert.cssProperty('.book','opacity','0.5')
+            })
+    });
+
     test('Deberia tener de titulo Bookli', browser => {
         browser
             .url(BASE_URL)
