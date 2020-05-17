@@ -45,7 +45,7 @@ const Book = db.define(
         },
         country: {
             type: Sequelize.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         isbn: {
             type: Sequelize.STRING,
