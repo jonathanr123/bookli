@@ -34,6 +34,20 @@ describe('Home Test', () => {
                 browser.assert.cssProperty('.book','opacity','0.5')
             })
     });
+    //test realizado por enmanuel
+    test('agregue el test para verificar que el input de búsqueda tenga placeholder ', browser => { 
+
+        browser 
+        
+        .url(BASE_URL) 
+        
+        .waitForElementVisible('body') 
+        
+        .waitForElementVisible('body > header > div.search > input')   
+        
+        .assert.attributeContains('body > header > div.search > input','placeholder','buscar un libro....'); 
+        
+    }); 
 
     test('Deberia tener de titulo Bookli', browser => {
         browser
