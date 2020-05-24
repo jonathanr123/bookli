@@ -185,4 +185,17 @@ describe('Detail view', () => {
             .element('.book__actions [data-ref=removeFromFinish]')
             .text.to.equal('Volver a leer');
     });
+
+    //test realizado por nicolas
+    test('El link del icono de la app debera ser a HOME', browser => {
+        browser
+            .url(BASE_URL)
+            .waitForElementVisible('body')
+            .waitForElementVisible('.brand')
+            .assert.attributeContains(
+                'body > header > div.brand > a',
+                'href',
+                '/'
+            );
+    });
 });
