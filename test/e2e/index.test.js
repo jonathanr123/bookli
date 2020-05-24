@@ -23,6 +23,32 @@ after(() => {
 });
 
 describe('Home Test', () => {
+
+    //test realizado por jonathan
+    test('Deberia opacarse la card cuando paso el mouse por encima', browser => {
+        browser
+            .url(BASE_URL)
+            .waitForElementVisible('body')
+            .waitForElementVisible('.booklist .book')
+            .moveToElement('body > main > div > div.books-container > div > a:nth-child(n) > div', 10, 10, function(){
+                browser.assert.cssProperty('.book','opacity','0.5')
+            })
+    });
+    //test realizado por enmanuel
+    test('agregue el test para verificar que el input de búsqueda tenga placeholder ', browser => { 
+
+        browser 
+        
+        .url(BASE_URL) 
+        
+        .waitForElementVisible('body') 
+        
+        .waitForElementVisible('body > header > div.search > input')   
+        
+        .assert.attributeContains('body > header > div.search > input','placeholder','buscar un libro....'); 
+        
+    }); 
+
     test('Deberia tener de titulo Bookli', browser => {
         browser
             .url(BASE_URL)
