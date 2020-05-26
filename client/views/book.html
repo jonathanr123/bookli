@@ -36,7 +36,11 @@
         <button class="btn btn-primary" data-ref="addToList">
             Empezar a leer
         </button>
-        {% endif %} {% if book.status == 'READING' %}
+        <button class="btn btn-primary"><a href="/" style="text-decoration: none; color: black">
+            Volver</a>
+        </button>
+        {% endif %} 
+        {% if book.status == 'READING' %}
         <button class="btn btn-warning" data-ref="removeFromList">
             Dejar de leer
         </button>
