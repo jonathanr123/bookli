@@ -9,4 +9,10 @@
 	+ Agrega placeholder al input de búsqueda.
 	+ Arregla el problema de los géneros de un libro que no se muestran en el detalle.
 	+ Arregla el problema del país de un libro que no se muestra en el detalle.
+
+-------------------------------------------------------------------------------------------
 	
+# v1.2.1
+
+## hotfix:
+	+ Cambia color de fondo de las cards.
