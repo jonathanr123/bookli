@@ -43,13 +43,18 @@ const Book = db.define(
             type: Sequelize.STRING,
             allowNull: false,
         },
+        country: {
+            type: Sequelize.STRING,
+            allowNull: true,
+        },
         isbn: {
             type: Sequelize.STRING,
             allowNull: false,
         },
         genres: {
             type: Sequelize.JSON,
-        },
+            allowNull:false,
+         },
         authors: {
             type: Sequelize.JSON,
             allowNull: false,

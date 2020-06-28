@@ -1,5 +1,4 @@
-# Bookli
-
+	
 Aplicación utilizada en la cursada 2020 de Ingenieria de Software. UTN-FRLP
 
 ## Dependencias
@@ -18,3 +17,9 @@ Aplicación utilizada en la cursada 2020 de Ingenieria de Software. UTN-FRLP
 ## Iniciar la app en modo producción
 
 `npm start`
+
+##Grupo Nº3:
+-**Jonathan Sergio Rodriguez Alvarez**
+-**Enmanuel Humberto Bernal Custodio**
+-**Nicolas Vidal**
+-**Nahuel Jesus Marro**
