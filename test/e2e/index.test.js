@@ -34,6 +34,15 @@ describe('Home Test', () => {
                 browser.assert.cssProperty('.book','opacity','0.5')
             })
     });
+
+    test('El fondo de la card debe ser color lightskyblue', browser => {
+        browser
+            .url(BASE_URL)
+            .waitForElementVisible('body')
+            .waitForElementVisible('.card')
+            .assert.cssProperty('body > main > div > div.books-container > div > a:nth-child(1) > div','background-color','rgba(135, 206, 250, 1)')
+    });
+
     //test realizado por enmanuel
     test('agregue el test para verificar que el input de búsqueda tenga placeholder ', browser => { 
 
