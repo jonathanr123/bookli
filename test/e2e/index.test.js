@@ -57,6 +57,18 @@ describe('Home Test', () => {
         .assert.attributeContains('body > header > div.search > input','placeholder','buscar un libro....'); 
         
     }); 
+    test('El borde de las cards deben ser azules', browser => {
+        browser
+            .url(BASE_URL)
+            .waitForElementVisible('body')
+            .waitForElementVisible('.booklist')
+            .assert.cssProperty(
+                'body > main > div > div.books-container > div > a:nth-child(1) > div',
+                'border',
+                '3px solid rgb(3, 0, 204)'
+            )
+
+    });
 
     test('Deberia tener de titulo Bookli', browser => {
         browser
