@@ -219,4 +219,14 @@ describe('Detail view', () => {
                 '/'
             );
     });
+    test('En el detalle del libro debera aparecer el ISBN', browser => {
+        browser
+            .url(BASE_URL + '/detail/1')
+            .waitForElementVisible('body')
+            .waitForElementVisible('.book__extra-info')
+            .pause(400);
+        browser.expect
+            .element(".book__extra-info > .book_isbn")
+            .text.to.equal("El ISBN del libro es: 9788499089515.");
+    });
 });
