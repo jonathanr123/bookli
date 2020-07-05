@@ -57,6 +57,18 @@ describe('Home Test', () => {
         .assert.attributeContains('body > header > div.search > input','placeholder','buscar un libro....'); 
         
     }); 
+    test('El borde de las cards deben ser azules', browser => {
+        browser
+            .url(BASE_URL)
+            .waitForElementVisible('body')
+            .waitForElementVisible('.booklist')
+            .assert.cssProperty(
+                'body > main > div > div.books-container > div > a:nth-child(1) > div',
+                'border',
+                '3px solid rgb(3, 0, 204)'
+            )
+
+    });
 
     test('Deberia tener de titulo Bookli', browser => {
         browser
@@ -207,4 +219,27 @@ describe('Detail view', () => {
                 '/'
             );
     });
+    test('En el detalle del libro debera aparecer el ISBN', browser => {
+        browser
+            .url(BASE_URL + '/detail/1')
+            .waitForElementVisible('body')
+            .waitForElementVisible('.book__extra-info')
+            .pause(400);
+        browser.expect
+            .element(".book__extra-info > .book_isbn")
+            .text.to.equal("El ISBN del libro es: 9788499089515.");
+    });
+
+    test('Verifica que el boton de Comprar me redireccione a Amazon ', browser => {
+        browser
+        .url(BASE_URL)
+        .waitForElementVisible('body')
+        .waitForElementVisible('body > main > div > div.filters-container > form > label:nth-child(4) > a > div')
+        .click('body > main > div > div.filters-container > form > label:nth-child(4) > a > div')
+        .pause(400);
+
+        browser.expect.url().to.equal('https://www.amazon.com/-/es/');
+    });
+
 });
+

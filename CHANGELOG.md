@@ -16,3 +16,11 @@
 
 ## hotfix:
 	+ Cambia color de fondo de las cards.
+
+-------------------------------------------------------------------------------------------
+# v1.3.0
+
+## Feature:
+	+ Cambia el color de borde a todas las cards.
+	+ Agrega el ISBN en el detalle del libro.
+	+ Agrega en la home un botón de "Comprar" con un link a la sección de libros de Amazon.
