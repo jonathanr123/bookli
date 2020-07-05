@@ -229,4 +229,17 @@ describe('Detail view', () => {
             .element(".book__extra-info > .book_isbn")
             .text.to.equal("El ISBN del libro es: 9788499089515.");
     });
+
+    test('Verifica que el boton de Comprar me redireccione a Amazon ', browser => {
+        browser
+        .url(BASE_URL)
+        .waitForElementVisible('body')
+        .waitForElementVisible('body > main > div > div.filters-container > form > label:nth-child(4) > a > div')
+        .click('body > main > div > div.filters-container > form > label:nth-child(4) > a > div')
+        .pause(400);
+
+        browser.expect.url().to.equal('https://www.amazon.com/-/es/');
+    });
+
 });
+
